@@ -1,287 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hariom Asthana's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sacramento&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
-            padding-top: 70px;
-            margin-left: 250px;
-            margin: 0;
-            overflow-y: scroll; /* For enabling scroll */
-        }
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hariom Asthana - Innovative Software Developer | C++ Java Python MERN AI</title>
+    <meta name="description" content="Hariom Asthana - Innovative Software Developer skilled in C++, Java, Python, and MERN stack. AI enthusiast with 700+ LeetCode problems solved. Building futuristic tech for real-world impact." />
+    <meta name="keywords" content="Software Developer, C++, Java, Python, MERN Stack, AI, Machine Learning, Full Stack Developer, Web Development, Hariom Asthana" />
+    <meta name="author" content="Hariom Asthana" />
+    <link rel="canonical" href="https://hariom-portfolio.com" />
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: #888;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #555;
-        }
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Hariom Asthana - Innovative Software Developer" />
+    <meta property="og:description" content="Building futuristic tech solutions with C++, Java, Python & MERN stack. AI enthusiast solving complex problems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hariom-portfolio.com" />
+    <meta property="og:image" content="https://hariom-portfolio.com/og-image.jpg" />
+    <meta property="og:locale" content="en_US" />
 
-        header {
-            background: linear-gradient(145deg, #3a3f58, #6a707f); /* Gradient for header */
-            color: #ffffff;
-            padding: 4rem 0;
-            text-align: center;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            border-bottom: 4px solid #f8f9fa;
-            transform: perspective(800px) rotateX(10deg);
-            transition: all 0.3s ease;
-        }
-        header:hover {
-            transform: perspective(800px) rotateX(0deg);
-        }
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hariom Asthana - Software Developer" />
+    <meta name="twitter:description" content="Innovative developer creating futuristic tech solutions" />
+    <meta name="twitter:image" content="https://hariom-portfolio.com/twitter-image.jpg" />
 
-        header h1 {
-            font-family: 'Sacramento', cursive;
-            font-size: 4rem;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
-        header p {
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 250px;
-            background: linear-gradient(180deg, #4e5d6d, #3a3f58);
-            padding-top: 200px;
-            padding-left: 10px;
-            box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
-            transform: perspective(600px) rotateY(-5deg);
-            transition: all 0.3s ease;
-        }
-        nav .navbar-brand {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            padding: 15px 10px;
-            font-weight: 600;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-        nav .navbar-brand:hover {
-            color: #f8f9fa;
-            text-decoration: underline;
-            transform: scale(1.1) translateX(5px); /* Slight translation effect */
-        }
-        
-        section {
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 3rem;
-            background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Gradient background for sections */
-            border-radius: 12px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-            transform: perspective(800px) rotateX(5deg);
-            transition: transform 0.3s ease;
-        }
-        section:hover {
-            transform: perspective(800px) rotateX(0deg) translateY(-10px);
-        }
-
-        h2 {
-            color: #007bff;
-            text-transform: uppercase;
-            border-bottom: 2px solid #007bff;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .project {
-            margin-bottom: 3rem;
-            background-color: #f7f7f7;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        .project:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-link {
-            color: #28a745;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .btn-link:hover {
-            color: #218838;
-            transform: scale(1.05);
-        }
-
-        .profile-img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 5px solid #ffffff;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            transform: scale(1.05);
-            transition: all 0.3s ease;
-            margin-bottom: 20px;
-        }
-        .profile-img:hover {
-            transform: scale(1.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem 0;
-            background: #343a40;
-            color: #ffffff;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-            transform: perspective(800px) rotateX(10deg);
-        }
-
-        .contact-detail {
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-detail a {
-            color: #007bff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .contact-detail a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-        }
-
-        /* Add Font Awesome Icons to Contact Section */
-        .contact-detail i {
-            margin-right: 10px;
-            color: #28a745;
-            transition: all 0.3s ease;
-        }
-
-        .contact-detail i:hover {
-            color: #218838;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img src="pic.jpg" alt="Hariom Asthana" class="profile-img">
-        <h1>Hariom Asthana</h1>
-        <p>Aspiring Software Engineer | AI Enthusiast | MERN Stack Developer</p>
-    </header>
-
-    <nav>
-        <a class="navbar-brand" href="javascript:void(0)" onclick="showSection('about')">About</a>
-        <a class="navbar-brand" href="javascript:void(0)" onclick="showSection('skills')">Skills</a>
-        <a class="navbar-brand" href="javascript:void(0)" onclick="showSection('projects')">Projects</a>
-        <a class="navbar-brand" href="javascript:void(0)" onclick="showSection('contact')">Contact</a>
-    </nav>
-
-    <div id="about" class="section-content" style="display: none;">
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I am Hariom Asthana, a passionate software engineer with a deep interest in AI and machine learning. I am currently pursuing my Bachelor's in Computer Science, where I am constantly working on improving my coding and problem-solving skills. I love creating scalable, impactful projects that can make a real difference in people's lives. My favorite technologies to work with include the MERN stack, TensorFlow, OpenCV, and many others. Apart from coding, I enjoy creative activities like writing, music, and photography.</p>
-
-            <p>I am continuously striving to enhance my understanding of the rapidly evolving field of technology, and I am always eager to take on new challenges. My goal is to work with cutting-edge technologies to build innovative solutions that solve real-world problems. Let's connect, and together we can make a difference in the tech world!</p>
-        </section>
-    </div>
-
-    <div id="skills" class="section-content" style="display: none;">
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> C/C++, JavaScript, Python, HTML, CSS</li>
-                <li><strong>Frameworks:</strong> MERN Stack (MongoDB, Express.js, React.js, Node.js), TensorFlow, OpenCV</li>
-                <li><strong>Databases:</strong> MongoDB, SQL</li>
-                <li><strong>Machine Learning:</strong> Deep Learning, NLP, Supervised Learning</li>
-                <li><strong>Tools & Technologies:</strong> Git, Docker, Postman, VS Code</li>
-                <li><strong>Soft Skills:</strong> Leadership, Communication, Problem-Solving, Teamwork</li>
-            </ul>
-        </section>
-    </div>
-
-    <div id="projects" class="section-content" style="display: none;">
-        <section>
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Drishyanet: Object Detection</h3>
-                <p>This AI-based tool uses real-time object detection to track attendance in educational settings. It integrates face recognition to automate attendance and enhance security in classrooms.</p>
-                <p><strong>Technologies:</strong> Python, OpenCV, TensorFlow</p>
-                <p><a href="https://github.com/gaurang-knight007/Drishyanet" class="btn-link" target="_blank">GitHub Link</a></p>
-            </div>
-            <div class="project">
-                <h3>TCom – Item Rental Platform</h3>
-                <p>A web platform built with Python and Flask for managing the rental of hostel items. It supports item listing, order management, and user profiles.</p>
-                <p><strong>Technologies:</strong> Python, Flask, SQL, HTML, CSS, JavaScript</p>
-                <p><a href="https://github.com/hariomasthana92/Speako" class="btn-link" target="_blank">GitHub Link</a></p>
-            </div>
-            <div class="project">
-                <h3>Share Rooms (In Progress)</h3>
-                <p>A platform for finding and sharing rooms among students, allowing users to list rooms for rent and search for available rooms.</p>
-                <p><strong>Technologies:</strong> MERN Stack</p>
-                <p><a href="https://github.com/Gauravsingh096/ShrareRooms" class="btn-link" target="_blank">GitHub Link</a></p>
-            </div>
-            <div class="project">
-                <h3>SpeakO: Text-to-Speech Converter</h3>
-                <p>A JavaScript-based application that converts text into speech. It supports multiple languages and customizable speech rates.</p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, NLP</p>
-                <p><a href="https://github.com/hariomasthana92/Speako" class="btn-link" target="_blank">GitHub Link</a></p>
-            </div>
-        </section>
-    </div>
-
-    <div id="contact" class="section-content" style="display: none;">
-        <section>
-            <h2>Contact</h2>
-            <p>I'd love to connect with you! Feel free to reach out via the following methods:</p>
-            <div class="contact-detail">
-                <i class="fas fa-envelope"></i><strong>Email:</strong> <a href="mailto:hariomasthana.cseai.29@gmail.com">hariomasthana.cseai.29@gmail.com</a>
-            </div>
-            <div class="contact-detail">
-                <i class="fas fa-github"></i><strong>GitHub:</strong> <a href="https://github.com/hariomasthana92" target="_blank">hariomasthana92</a>
-            </div>
-            <div class="contact-detail">
-                <i class="fas fa-linkedin"></i><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hariomasthana" target="_blank">Hariom Asthana LinkedIn</a>
-            </div>
-            <div class="contact-detail">
-                <i class="fas fa-phone-alt"></i><strong>Phone:</strong> <a href="tel:+917678804451">+91 7678804451</a>
-            </div>
-            <div class="contact-detail">
-                <i class="fas fa-map-marker-alt"></i><strong>Location:</strong> Mela Maidan, Bhatnagar Colony, Lakhimpur Kheri, Uttar Pradesh, India
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Hariom Asthana. All rights reserved.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome Icons -->
-    <script>
-        function showSection(sectionId) {
-            var sections = document.querySelectorAll('.section-content');
-            sections.forEach(function(section) {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hariom Asthana",
+      "jobTitle": "Software Developer",
+      "description": "Innovative Software Developer with expertise in C++, Java, Python, and MERN stack development",
+      "url": "https://hariom-portfolio.com",
+      "email": "hariomasthana.cseai.29@gmail.com",
+      "telephone": "+91-7678804451",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kanpur",
+        "addressCountry": "India"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "PSIT Kanpur"
+      },
+      "knowsAbout": ["C++", "Java", "Python", "MERN Stack", "Machine Learning", "Artificial Intelligence", "Web Development"],
+      "sameAs": [
+        "https://github.com/hariom",
+        "https://linkedin.com/in/hariom",
+        "https://leetcode.com/hariom"
+      ]
+    }
     </script>
-</body>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
